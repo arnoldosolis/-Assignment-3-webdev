@@ -84,7 +84,22 @@ function removeR()
 //Remove a column
 function removeC() 
 {
-    alert("Clicked Remove Col")
+    // Gets table element from the DOM
+    let currGrid = document.getElementById("grid");
+
+    // Gets all rows from the grid
+    let currNumOfRowsInGrid = document.querySelectorAll("tr");
+
+    let currNumOfRows = 0;
+
+    for (let i = 0; i < numRows; i++)
+    {
+        currNumOfRowsInGrid[currNumOfRows].removeChild(currNumOfRowsInGrid[currNumOfRows].lastChild);
+        // amount of rows deleted
+        currNumOfRows++;
+    }
+    
+    numCols--;
 }
 //sets global var for selected color
 function selected() 
