@@ -73,7 +73,13 @@ function addC()
 //Removes a row
 function removeR() 
 {
-    alert("Clicked Remove Row")
+    // Gets table element from the DOM
+    let currGrid = document.getElementById("grid");
+
+    // Delete last inserted row
+    currGrid.deleteRow(numRows-1);
+
+    numRows--;
 }
 //Remove a column
 function removeC() 
