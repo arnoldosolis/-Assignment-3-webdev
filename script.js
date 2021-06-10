@@ -17,7 +17,7 @@ function addR()
         var box = document.createElement("td");
         box.onclick = function()
         {
-            this.style.backgroundColor = document.getElementById("colorPicker").value;
+            this.style.backgroundColor = document.getElementById("selectedID").value;
         };
         addRow.appendChild(box);
         numCols++;
@@ -29,7 +29,7 @@ function addR()
             var box = document.createElement("td");
             box.onclick = function()
             {
-                this.style.backgroundColor = document.getElementById("colorPicker").value;
+                this.style.backgroundColor = document.getElementById("selectedID").value;
             };
             addRow.appendChild(box);
         }
@@ -61,7 +61,7 @@ function addC()
         var box =  document.createElement("td");
         box.onclick = function()
         {
-            this.style.backgroundColor = document.getElementById("colorPicker").value;
+            this.style.backgroundColor = document.getElementById("selectedID").value;
         };
         addColumn[currNumOfRows].appendChild(box);
 
