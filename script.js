@@ -120,5 +120,12 @@ function clearAll()
 
 function fillU() 
 {
-    alert("Clicked Fill All Uncolored")
+    // Gets grid from the DOM 
+    let currGrid = document.querySelectorAll("td").forEach(td => {
+        if (td.style.backgroundColor === "" || td.style.backgroundColor === "white")
+        {
+            // Gets currently selected color and sets all unfilled boxes to said color
+            td.style.backgroundColor = document.getElementById("selectedID").value;
+        }
+    });
 }
