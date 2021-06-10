@@ -110,7 +110,8 @@ function selected()
 
 function fill() 
 {
-    alert("Clicked Fill All")
+    // Gets current grid and goes through all boxes and fills them with selected color
+    let currGrid = document.querySelectorAll('td').forEach(td => td.style.backgroundColor = document.getElementById("selectedID").value);
 }
 
 function clearAll() 
