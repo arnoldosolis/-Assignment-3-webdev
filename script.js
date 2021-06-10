@@ -116,7 +116,8 @@ function fill()
 
 function clearAll() 
 {
-    alert("Clicked Clear All")
+    // Gets current grid and goes through all boxed and fills them with white (in other words resetting them)
+    document.querySelectorAll('td').forEach(td => td.style.backgroundColor = "white");
 }
 
 function fillU() 
