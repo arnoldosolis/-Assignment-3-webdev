@@ -80,13 +80,16 @@ function removeR()
     currGrid.deleteRow(numRows-1);
 
     numRows--;
+
+    if (numRows < 1)
+    {
+        numCols = 0;
+        numRows = 0;
+    }
 }
 //Remove a column
 function removeC() 
 {
-    // Gets table element from the DOM
-    let currGrid = document.getElementById("grid");
-
     // Gets all rows from the grid
     let currNumOfRowsInGrid = document.querySelectorAll("tr");
 
@@ -98,7 +101,7 @@ function removeC()
         // amount of rows deleted
         currNumOfRows++;
     }
-    
+
     numCols--;
 }
 //sets global var for selected color
@@ -111,7 +114,7 @@ function selected()
 function fill() 
 {
     // Gets current grid and goes through all boxes and fills them with selected color
-    let currGrid = document.querySelectorAll('td').forEach(td => td.style.backgroundColor = document.getElementById("selectedID").value);
+    currGrid = document.querySelectorAll('td').forEach(td => td.style.backgroundColor = document.getElementById("selectedID").value);
 }
 
 function clearAll() 
