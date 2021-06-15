@@ -114,7 +114,7 @@ function selected()
 function fill() 
 {
     // Gets current grid and goes through all boxes and fills them with selected color
-    currGrid = document.querySelectorAll('td').forEach(td => td.style.backgroundColor = document.getElementById("selectedID").value);
+    document.querySelectorAll('td').forEach(td => td.style.backgroundColor = document.getElementById("selectedID").value);
 }
 
 function clearAll() 
@@ -126,7 +126,7 @@ function clearAll()
 function fillU() 
 {
     // Gets grid from the DOM 
-    let currGrid = document.querySelectorAll("td").forEach(td => {
+    document.querySelectorAll("td").forEach(td => {
         if (td.style.backgroundColor === "" || td.style.backgroundColor === "white")
         {
             // Gets currently selected color and sets all unfilled boxes to said color
